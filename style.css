@@ -1,5 +1,5 @@
 :root{
-  --green:#0B3D2E;        /* forest green */
+  --green:#0B3D2E;
   --green2:#062A1F;
   --silver:#E5E7EB;
   --ink:#0F172A;
@@ -18,7 +18,7 @@ body{
   line-height:1.55;
 }
 
-/* Top bar */
+/* HEADER */
 .topbar{
   background:linear-gradient(90deg,var(--green),var(--green2));
   color:white;
@@ -34,26 +34,31 @@ body{
   flex-wrap:wrap;
 }
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;display:block}
-.brand-title{font-weight:800;letter-spacing:.3px;font-size:16px}
-.brand-subtitle{color:rgba(255,255,255,.85);font-size:12.5px;margin-top:2px}
+.logo{width:44px;height:44px}
+.brand-title{font-weight:800;font-size:16px}
+.brand-subtitle{font-size:12.5px;color:rgba(255,255,255,.85)}
 
-/* Nav */
-.nav{display:flex;gap:8px;flex-wrap:wrap}
+/* NAV */
+.nav{display:flex;gap:10px}
 .nav a{
-  color:rgba(255,255,255,.9);
+  color:white;
   text-decoration:none;
   padding:8px 10px;
-  border-radius:10px;
+  border-radius:8px;
   font-size:13px;
 }
-.nav a:hover{background:rgba(255,255,255,.12)}
-.nav .cta{
-  border:1px solid rgba(255,255,255,.65);
+.nav a:hover{background:rgba(255,255,255,.15)}
+
+/* FULL WIDTH PHOTO */
+.hero-photo img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
 }
 
-/* Hero */
-.hero{padding:18px 0 4px}
+/* HERO CARD */
+.hero{margin-top:16px}
 .hero-card{
   background:var(--card);
   border:1px solid var(--line);
@@ -65,96 +70,63 @@ body{
 .hero-card p{margin:0 0 12px;color:var(--muted)}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{
-  display:inline-block;
   padding:6px 10px;
   border-radius:999px;
   background:#EEF2FF;
   border:1px solid #E0E7FF;
   font-size:12px;
-  color:#1E293B;
 }
 
-/* Cards */
+/* CARDS */
 .card{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:16px;
-  padding:16px 16px 14px;
-  margin:14px 0;
+  padding:16px;
+  margin:16px 0;
   box-shadow:0 10px 22px rgba(2,6,23,.06);
 }
-.section-head{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
-h2{margin:0 0 8px;font-size:18px}
-h3{margin:0 0 6px;font-size:14.5px}
+.section-head{margin-bottom:10px}
+h2{margin:0 0 6px;font-size:18px}
+h3{margin:0 0 6px;font-size:14px}
 .muted{color:var(--muted)}
 
-/* Table */
+/* TABLE */
 .table-wrap{overflow:auto;border-radius:14px;border:1px solid var(--line)}
 table{width:100%;border-collapse:collapse;min-width:720px}
 thead th{
-  text-align:left;
   background:#F1F5F9;
   border-bottom:1px solid var(--line);
-  padding:12px 12px;
+  padding:12px;
   font-size:12.5px;
+  text-align:left;
 }
 tbody td{
-  padding:12px 12px;
+  padding:12px;
   border-bottom:1px solid #E5E7EB;
   font-size:13px;
 }
-tbody tr:hover td{background:#F8FAFC}
 tbody tr:last-child td{border-bottom:none}
 
-/* Postseason mini cards */
+/* POSTSEASON */
 .grid-2{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:820px){.grid-2{grid-template-columns:1fr 1fr}}
 .mini-card{
   border:1px solid var(--line);
   border-radius:14px;
   padding:12px;
-  background:#FFFFFF;
 }
 
-/* Photos placeholders */
-.photo-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
-@media (min-width:820px){.photo-grid{grid-template-columns:1fr 1fr 1fr}}
-.photo-ph{
-  border:1px dashed #94A3B8;
-  border-radius:14px;
-  padding:26px 14px;
-  text-align:center;
-  color:#475569;
-  background:#F8FAFC;
-}
-
-/* Footer */
+/* FOOTER */
 .footer{
-  margin-top:18px;
+  margin-top:24px;
   padding:14px 0;
   border-top:1px solid var(--line);
   background:#FFFFFF;
 }
-.footer-inner{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px}
-.team-photo {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin: 16px 0;
-  border: 4px solid var(--green);
-}
-/* Full-width hero team photo */
-.hero-photo {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  margin-top: 0;
-}
-
-.hero-photo img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  display: block;
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:13px;
 }
