@@ -130,9 +130,4 @@ tbody tr:last-child td{border-bottom:none}
   gap:10px;
   font-size:13px;
 }
-.hero-photo img{
-  width:100% !important;
-  height:420px !important;
-  object-fit:cover !important;
-  display:block !important;
-}
+
